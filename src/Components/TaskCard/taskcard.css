@@ -1,12 +1,10 @@
 .task {
-    display: flex;
-    align-items: center;
     width: 674.37px;
     height: 61.73px;
     background-color: #FCFCFC;
     border: 1px solid #3C424A;
     padding: 10px;
-    border-radius: 5px;
+    border-radius: 8px;
     margin-bottom: 37px;
 }
 
@@ -14,3 +12,7 @@
     background-color: #6C45CE;
     color: white;
 }
+
+.task input[type="checkbox"] {
+   
+  }

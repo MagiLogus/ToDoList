@@ -6,8 +6,6 @@ import TaskCard from "../../Components/TaskCard/TaskCard";
 const ToDoList = () => {
   const [tasks, setTasks] = useState([
     { id: 1, name: 'Começar a execução do projeto', completed: false },
-    { id: 2, name: 'Teste', completed: false }, 
-    { id: 3, name: 'Falso Teste 3', completed: false }
   ]);
 
   const toggleTaskCompletion = (id) => {
