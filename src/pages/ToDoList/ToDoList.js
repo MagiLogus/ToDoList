@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import "./todolist.css"
 import Background from "../../Components/Background/Background";
 import TaskCard from "../../Components/TaskCard/TaskCard";
+import Title from "../../Components/Date/Date";
 
 const ToDoList = () => {
   const [tasks, setTasks] = useState([
@@ -29,15 +30,17 @@ const ToDoList = () => {
   return (
     <React.Fragment>
       <Background>
-        <div className="task-container">
-          <h1>Terça-Feira, <strong>24</strong> de Julho</h1>
-          <div className="search-bar">
+        <div className="page-container">
+          <div className="task-container">
+            <Title />
+            <div className="search-bar">
 
-            <input type="text" placeholder="Procurar tarefa" />
+              <input type="text" placeholder="Procurar tarefa" />
+            </div>
+            {tasks.map(task => (
+              <TaskCard id={task.id} name={task.name} completed={task.completed} onClick={() => deleteTask(task.id)} onChange={() => toggleTaskCompletion(task.id)} checked={task.completed} />
+            ))}
           </div>
-          {tasks.map(task => (
-            <TaskCard id={task.id} name={task.name} completed={task.completed} onClick={() => deleteTask(task.id)} onChange={() => toggleTaskCompletion(task.id)} checked={task.completed} />
-          ))}
           <button className="add-task-btn" onClick={addTask}>Nova tarefa</button>
         </div>
       </Background>

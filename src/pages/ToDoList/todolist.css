@@ -1,3 +1,9 @@
+.page-container {
+    display: flex;
+    flex-direction: column;
+
+}
+
 .task-container {
     display: flex;
     flex-direction: column;
@@ -6,16 +12,15 @@
     padding: 46px 35px 100px 35px;
 }
 
-.task-container h1 {
+.page-container .add-task-btn {
+    width: 201.38px;
+    height: 49.38px;
+    border: 2px solid #FCFCFC;
+    border-radius: 7.72PX;
+    background-color: #6C45CE;
     font-family: "Lato", sans-serif;
     font-weight: 700;
     font-style: normal;
-    font-size: 25px;
+    font-size: 17.75px;
     color: #FCFCFC;
-    margin-bottom: 37px;
-}
-
-.task-container h1 strong {
-    font-size: 30px;
-    color: #8758FF;
 }
